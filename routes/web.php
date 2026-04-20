@@ -20,7 +20,4 @@ Route::get('pert5', function () {
 });
 
 Route::get('dosen', [DosenController::class, 'index']);
-
-Route::get('bio', function () {
-    return view('biodata');
-});
+Route::get('biodata', [DosenController::class, 'biodata']);
