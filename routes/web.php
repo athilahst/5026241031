@@ -21,3 +21,35 @@ Route::get('pert5', function () {
 
 Route::get('dosen', [DosenController::class, 'index']);
 Route::get('biodata', [DosenController::class, 'biodata']);
+
+Route::get('pert1', function () {
+    return view('pertemuan1');
+});
+
+Route::get('pert2', function () {
+    return view('pertemuan2');
+});
+
+Route::get('pert3template', function () {
+    return view('pertemuan3template');
+});
+
+Route::get('pert3responsive', function () {
+    return view('pertemuan3responsive');
+});
+
+Route::get('pert3contoh', function () {
+    return view('pertemuan3contoh');
+});
+
+Route::get('pert4', function () {
+    return view('pertemuan4');
+});
+
+Route::get('pert5linktree', function () {
+    return view('pertemuan5linktree');
+});
+
+Route::get('pert5index', function () {
+    return view('pertemuan5index');
+});
