@@ -25,5 +25,3 @@
             <td>0896-0676-7404</td>
         </tr>
     </table>
-
-@endsection

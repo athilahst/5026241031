@@ -27,3 +27,4 @@ public function proses(Request $request){
         ", <br>Alamat : " . $alamat  ;
 }
 }
+
