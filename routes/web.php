@@ -5,6 +5,9 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\NilaiKuliahController;
+use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\MouseController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -75,3 +78,27 @@ Route::get('/pegawaiedit/{id}',[PegawaiDBController::class, 'edit']);
 Route::post('/pegawaiupdate',[PegawaiDBController::class, 'update']);
 Route::get('/pegawaihapus/{id}',[PegawaiDBController::class, 'hapus']);
 Route::get('/pegawaicari', [PegawaiDBController::class, 'cari']);
+
+//nilaikuliah
+Route::get('/nilaikuliah', [NilaiKuliahController::class, 'index'])->name('nilaikuliah.index');
+Route::get('/nilaikuliah/create', [NilaiKuliahController::class, 'create'])->name('nilaikuliah.create');
+Route::post('/nilaikuliah', [NilaiKuliahController::class, 'store'])->name('nilaikuliah.store');
+Route::get('/nilaikuliah/{id}/edit', [NilaiKuliahController::class, 'edit'])->name('nilaikuliah.edit');
+Route::put('/nilaikuliah/{id}', [NilaiKuliahController::class, 'update'])->name('nilaikuliah.update');
+Route::delete('/nilaikuliah/{id}', [NilaiKuliahController::class, 'destroy'])->name('nilaikuliah.destroy');
+
+//siswa
+Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa.index');
+Route::get('/siswa/create', [SiswaController::class, 'create'])->name('siswa.create');
+Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
+Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
+Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
+Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
+//mouse
+Route::get('/mouse', [MouseController::class, 'index'])->name('mouse.index');
+Route::get('/mouse/create', [MouseController::class, 'create'])->name('mouse.create');
+Route::post('/mouse', [MouseController::class, 'store'])->name('mouse.store');
+Route::get('/mouse/{kode}/edit', [MouseController::class, 'edit'])->name('mouse.edit');
+Route::put('/mouse/{kode}', [MouseController::class, 'update'])->name('mouse.update');
+Route::delete('/mouse/{kode}', [MouseController::class, 'destroy'])->name('mouse.destroy');
