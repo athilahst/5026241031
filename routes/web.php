@@ -8,6 +8,7 @@ use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\NilaiKuliahController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\MouseController;
+use App\Http\Controllers\KeranjangBelanjaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -102,3 +103,9 @@ Route::post('/mouse', [MouseController::class, 'store'])->name('mouse.store');
 Route::get('/mouse/{kode}/edit', [MouseController::class, 'edit'])->name('mouse.edit');
 Route::put('/mouse/{kode}', [MouseController::class, 'update'])->name('mouse.update');
 Route::delete('/mouse/{kode}', [MouseController::class, 'destroy'])->name('mouse.destroy');
+
+//keranjangbelanja
+Route::get('/keranjangbelanja',[KeranjangBelanjaController::class, 'index'])->name('keranjangbelanja.index');
+Route::get('/keranjangbelanja/create',[KeranjangBelanjaController::class, 'create'])->name('keranjangbelanja.create');
+Route::post('/keranjangbelanja',[KeranjangBelanjaController::class, 'store'])->name('keranjangbelanja.store');
+Route::delete('/keranjangbelanja/{id}',[KeranjangBelanjaController::class, 'destroy'])->name('keranjangbelanja.destroy');
