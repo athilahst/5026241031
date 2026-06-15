@@ -9,6 +9,8 @@ use App\Http\Controllers\NilaiKuliahController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\MouseController;
 use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\BukuController;
+use App\Http\Controllers\MyKaryawanController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -109,3 +111,11 @@ Route::get('/keranjangbelanja',[KeranjangBelanjaController::class, 'index'])->na
 Route::get('/keranjangbelanja/create',[KeranjangBelanjaController::class, 'create'])->name('keranjangbelanja.create');
 Route::post('/keranjangbelanja',[KeranjangBelanjaController::class, 'store'])->name('keranjangbelanja.store');
 Route::delete('/keranjangbelanja/{id}',[KeranjangBelanjaController::class, 'destroy'])->name('keranjangbelanja.destroy');
+
+//buku
+Route::get('/buku',[BukuController::class, 'index'])->name('buku.index');
+Route::put('/buku/{id}',[BukuController::class, 'pinjam'])->name('buku.pinjam');
+
+//mykaryawan
+Route::get('/eas', [MyKaryawanController::class, 'index']);
+Route::get('/easedit/{kodepegawai}', [MyKaryawanController::class, 'edit']);

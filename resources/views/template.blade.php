@@ -36,7 +36,10 @@
                         <a class="nav-link" href="/keranjangbelanja">Keranjang Belanja</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">EAS</a>
+                        <a class="nav-link" href="/buku">Buku</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/mykaryawan">EAS</a>
                     </li>
 
                 </ul>
